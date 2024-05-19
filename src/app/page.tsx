@@ -28,7 +28,7 @@ export default function Home() {
         <div>
           {todos.isLoading && <div>Loading...</div>}
           {todos.isError && <div>Error: {todos.error.message}</div>}
-          {todos.data?.length === 0 && <div>No todos yet...</div>}
+          {todos.data?.length === 0 && <div className="text-red-500">No todos yet...</div>}
           {todos?.data?.map((todo) => (
             <div key={todo.id} className="flex gap-3 items-center">
               <input
@@ -60,6 +60,7 @@ export default function Home() {
             <label htmlFor="content">Title: </label>
             <input
               id="content"
+              value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="text-black border-2 h-[40px]"
             />

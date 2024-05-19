@@ -1,4 +1,4 @@
-import { todos } from "@/db/schema";
+import { todos } from "@/server/db/schema";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 import { z } from 'zod'
 import { desc, eq } from "drizzle-orm";
